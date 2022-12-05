@@ -1,10 +1,19 @@
+name: .NET
+
+on:
+  push: # xxxをプッシュイベントに変えてください
+    branches: [ "main" ] # mainブランチを対象にしてください
+  pull_request: # xxxをプルリクエストイベントに変えてください
+    branches: [ "main" ] # mainブランチを対象にしてください
+  workflow_dispatch: # xxxを手動イベントに変えてください
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - # チェックアウトアクションを記入してください
+    - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
