@@ -15,6 +15,10 @@ jobs:
   debug:
     runs-on: ubuntu-latest
     steps:
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
     - name: echo dotnet root
       run: echo ${{ env.DOTNET_ROOT }}
 
