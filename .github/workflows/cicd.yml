@@ -37,6 +37,7 @@ jobs:
         path: ${{env.DOTNET_ROOT}}/webapp
 
   deploy:
+    if: ${{ false }}
     permissions:
       contents: none
     runs-on: ubuntu-latest
