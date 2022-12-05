@@ -12,8 +12,14 @@ on:
   workflow_dispatch: # xxxを手動イベントに変えてください
 
 jobs:
-  build:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo dotnet root
+      run: echo ${{ env.DOTNET_ROOT }}
 
+  build:
+    if: ${{ false }}
     runs-on: ubuntu-latest
 
     steps:
