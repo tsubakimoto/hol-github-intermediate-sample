@@ -40,7 +40,7 @@ jobs:
     permissions:
       contents: none
     runs-on: ubuntu-latest
-    # この行にneedsを挿入してください
+    needs: build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
